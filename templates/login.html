@@ -184,7 +184,7 @@ table {
         <form method="post">
           {% csrf_token %}
           <!-- username:admin,password:admin -->
-          <input type="number" min='0' max="999" name="userID" placeholder="User ID"/>
+          <input type="text" maxLength="3" name="userID" placeholder="User ID"/>
           <button type="submit">Search</button>
         </form>
       </div>
