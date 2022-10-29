@@ -35,6 +35,7 @@ def login(request):
                     args = {}
                     args['message'] = "Enter a number!"
                     return render(request, 'login.html',args)
+            myuserID = User.objects.filter(userID=request.POST.get("userID"))[0].userID                
         except:
             args = {}
             args['message'] = "Wrong ID!"
