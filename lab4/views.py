@@ -24,8 +24,17 @@ def details(request):
 def login(request):
     args = {}
     if request.method == 'POST':
+        condition = False
         try:
-            myuserID = User.objects.filter(userID=request.POST.get("userID"))[0].userID
+                try:
+                    int(request.POST.get("userID"))
+                    condition = True
+                except ValueError:
+                    condition = False
+                if condition == False:
+                    args = {}
+                    args['message'] = "Enter a number!"
+                    return render(request, 'login.html',args)
         except:
             args = {}
             args['message'] = "Wrong ID!"
