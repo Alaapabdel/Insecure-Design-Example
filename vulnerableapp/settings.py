@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-g8f^81mf*1-kyyo4iu)2g3)3zql-vtp_g%0(2hybhe$kk(%jwt
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*', '127.0.0.1']
+ALLOWED_HOSTS = ['*', '127.0.0.1','https://vulnerableappfour.herokuapp.com/']
 CSRF_TRUSTED_ORIGINS = ['https://vulnerableappfour.herokuapp.com/']
 
 # Application definition
